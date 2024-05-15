@@ -1,25 +1,14 @@
 #include <iostream>
 #include <vector>
-#include <string>
+#include "Person.hpp"
 
-constexpr int DEFAULT = 0 ; /* Default Integer Value */
-
-/* Create Class For user */
-class person
-{
-    public:
-        /* Variables */    
-        std::string userName ;
-        int userAge = DEFAULT ;
-};
-
-std::vector<person>Records ; /* Array Of Records To Store Users Data */
+std::vector<Person>Records ; /* Array Of Records To Store Users Data */
 
 enum class option{ADD = 1 , FETCH , QUIT}; /* Options For User */
 
 void add_record(std::string& Name , int Age)
 {
-    person User ;
+    Person User ;
 
     User.userName = Name;
 
@@ -78,7 +67,7 @@ int main(void)
         case option::ADD:
             std::cout << "\nAdd User. Please Enter User Name and Age \n" ;
             std::cout << "UserName: " ;
-            std::cin >> name ;
+            std::cin >> name;
             std::cout << "UserAge: " ;
             std::cin >> age ;
             add_record(name , age);
