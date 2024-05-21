@@ -1,20 +1,20 @@
-#ifndef PERSON_H
-#define PERSON_H
+#ifndef PERSON_HPP
+#define PERSON_HPP
 
-#pragma once
-
-#include <string>
-
-constexpr int DEFAULT = 0 ; /* Default Integer Value */
-
+constexpr int DEFAULT = 0; /* Default Integer Value */
 
 /* Create Class For user */
 class Person
 {
-    public:
-        /* Variables */    
-        std::string userName ;
-        int userAge = DEFAULT ;
+private:
+    /* Variables */
+    std::string userName;
+    int userAge = DEFAULT;
+
+public:
+    /* Friend Functions */
+    friend void add_record(std::string &Name, int Age);
+    friend void fetch_record(int userId);
 };
 
 #endif
