@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 #include "Person.hpp"
 
 std::vector<Person> Records; /* Array Of Records To Store Users Data */
@@ -14,11 +15,7 @@ enum class option /* Options For User */
 /* Function to Add New Record */
 void add_record(std::string &Name, int Age)
 {
-    Person User;
-
-    User.userName = Name;
-
-    User.userAge = Age;
+    Person User(Name, Age);
 
     Records.push_back(User);
 }

@@ -1,9 +1,9 @@
 #ifndef PERSON_HPP
 #define PERSON_HPP
 
-constexpr int DEFAULT = 0; /* Default Integer Value */
+#include <string>
+constexpr int DEFAULT = 0;
 
-/* Create Class For user */
 class Person
 {
 private:
@@ -12,6 +12,10 @@ private:
     int userAge = DEFAULT;
 
 public:
+    Person(std::string Name, int Age) : userName(Name), userAge(Age) /* Constructor */
+    {
+    }
+
     /* Friend Functions */
     friend void add_record(std::string &Name, int Age);
     friend void fetch_record(int userId);
