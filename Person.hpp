@@ -12,9 +12,7 @@ private:
     int userAge = DEFAULT;
 
 public:
-    Person(std::string Name, int Age) : userName(Name), userAge(Age) /* Constructor */
-    {
-    }
+    Person(std::string Name, int Age); /* Constructor*/
 
     /* Friend Functions */
     friend void add_record(std::string &Name, int Age);
